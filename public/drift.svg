@@ -1,0 +1,26 @@
+<svg width="290" height="80" viewBox="68 5 290 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="driftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5eead4"></stop>
+      <stop offset="100%" stop-color="#3b82f6"></stop>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="translate(80, 0)">
+    <!-- Icon -->
+    <g transform="translate(0,20)" filter="url(#softGlow)">
+      <path d="M10 40 C30 10, 70 10, 90 40 C70 30, 30 30, 10 40 Z" fill="url(#driftGradient)"></path>
+      <path d="M25 45 C40 30, 60 30, 75 45" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.8"></path>
+    </g>
+
+    <!-- Text -->
+    <text x="110" y="75" font-size="56" font-family="Segoe UI, Inter, system-ui, sans-serif" font-weight="600" fill="url(#driftGradient)" letter-spacing="2">Drift</text>
+  </g>
+</svg>
