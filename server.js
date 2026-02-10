@@ -51,6 +51,11 @@ app.post('/adblock', (req, res) => {
   res.json({ enabled: adBlockEnabled });
 });
 
+// Caddy on-demand TLS permission check — always approve
+app.get('/caddy-check', (req, res) => {
+  res.status(200).send('OK');
+});
+
 function fetchWithRedirects(targetUrl, redirectCount, callback, options) {
   if (redirectCount > MAX_REDIRECTS) {
     return callback(new Error('Too many redirects'), null);
